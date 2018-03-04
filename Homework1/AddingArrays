@@ -1,0 +1,16 @@
+<script>
+var arrAdder = [
+  ['J', 'L', 'L', 'M'],
+  ['u', 'i', 'i', 'a'],
+  ['s', 'v', 'f', 'n'],
+  ['t', 'e', 'e', '']
+];
+
+console.log(arrAdder[0][0] + arrAdder[1][0] + arrAdder[2][0] + arrAdder[3][0]);
+
+console.log(arrAdder[0][1] + arrAdder[1][1] + arrAdder[2][1] + arrAdder[3][1]);
+
+console.log(arrAdder[0][2] + arrAdder[1][2] + arrAdder[2][2] + arrAdder[3][2]);
+
+console.log(arrAdder[0][3] + arrAdder[1][3] + arrAdder[2][3] + arrAdder[3][3]);
+</script>
