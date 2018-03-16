@@ -1,0 +1,24 @@
+<html>
+  <script>
+    function pascal(n) { //Pascal's Triangle Function
+      var result = []; //Getting the first two rows out of the way
+        result[0] = [1];
+        result[1] = [1, 1];
+      for (var row = 2; row < n; row++) { //Depends on how many rows there are
+        result[row] = [1]; //Adds the ones
+        for (var col = 1; col <= row - 1; col++) { //Now dealing with the columns
+          result[row][col] = result[row - 1][col] + result[row - 1][col - 1]; //Adds numbers
+          result[row].push(1); //Increases size
+        }
+      }
+      return result; //Gets the value
+    }
+
+    var number = 9; //Insert variable here
+
+    for (var n = 0; n < pascal(number).length; n++) { //Executing the function
+      document.write(pascal(number)[n] + "<br>");
+      console.log(pascal(number)[n] + "<br>");
+    }
+  </script>
+</html>
