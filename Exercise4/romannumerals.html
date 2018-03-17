@@ -1,0 +1,23 @@
+<html>
+  <script>
+    function romannumerals(number) {
+      var number = number.toUpperCase(), //Convert to uppercase
+          lookup = {I:1, V:5, X:10, L:50, C:100, D:500, M:1000},
+          notroman = 0,
+          n = number.length;
+      while (n--) {
+        if ( lookup[number[n]] < lookup[number[n + 1]]) //Checking to subtract or add
+          notroman -= lookup[number[n]];
+        else {
+          notroman += lookup[number[n]];
+        }
+      }
+      return notroman;
+    }
+
+    var input = prompt("Enter The Roman Number"); //Insert variable here
+
+    document.write(romannumerals(input));
+
+  </script>
+</html>
