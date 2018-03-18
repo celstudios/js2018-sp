@@ -1,0 +1,24 @@
+<html>
+  <script>
+  function basicSort(array) {
+    var done = false;
+    while (!done) {
+      done = true;
+      for (var i = 1; i < array.length; i += 1) {
+        if (array[i - 1] > array[i]) {
+          done = false;
+          var tmp = array[i - 1];
+          array[i - 1] = array[i];
+          array[i] = tmp;
+        }
+      }
+    }
+
+    return array;
+  }
+
+  var numbers = [98, 39, 68, 23, 47];
+  document.write(basicSort(numbers));
+  console.log(basicSort(numbers));
+  </script>
+</html>
