@@ -1,0 +1,29 @@
+<html>
+  <script>
+    var x = {
+      hours: 18,
+      minutes: 0,
+      seconds: 0
+    };
+
+    var alarm = new Date();
+    alarm.setHours(x.hours);
+    alarm.setMinutes(x.minutes);
+    alarm.setSeconds(x.seconds);
+    var now = new Date();
+
+    if (alarm - now <= 0) {
+      document.write('RING!!! RING!!!');
+      alarm.setDate(alarm.getDate() + 1);
+    }
+
+    var diff = alarm = new Date();
+    setTimeout(function(){ alert("Hello"); }, diff)
+
+    document.write("<br>");
+    document.write(alarm);
+    document.write("<br>");
+    document.write("<br>");
+
+  </script>
+</html>

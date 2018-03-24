@@ -1,0 +1,42 @@
+<html>
+  <script>
+    function pigLatinizeWord(string) {
+      var vowels = ['a', 'e', 'i', 'o', 'u'];
+      var slice = [];
+      var newString = '';
+      var space = '';
+
+      if (vowels.indexOf(string[0]) >= 0) {
+        return string + 'way';
+      }
+
+      for (var i=0; i<string.length; i++) {
+        if (vowels.indexOf(string[i]) >= 0) {
+          return newString + slice.join("") + 'ay';
+        } else {
+          slice.push(string[i]);
+          newString = string.slice(i + 1);
+        }
+      }
+    }
+
+    function pigLatinizeSentence(sentence) {
+      return sentence.replace(/\w+/g, pigLatinizeWord)
+    }
+
+    function titleCase(str) {
+     str = str.toLowerCase().split(' ');                // will split the string delimited by space into an array of words
+
+     for(var i = 0; i < str.length; i++){               // str.length holds the number of occurrences of the array...
+          str[i] = str[i].split('');                    // splits the array occurrence into an array of letters
+          str[i][0] = str[i][0].toUpperCase();          // converts the first occurrence of the array to uppercase
+          str[i] = str[i].join('');                     // converts the array of letters back into a word.
+     }
+     return str.join(' ');                              //  converts the array of words back to a sentence.
+    }
+
+    var phrase = prompt("Enter a sentence to be translated:");
+
+    document.write(titleCase(pigLatinizeSentence(phrase)));
+  </script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <script>
+    //var sayit = prompt("Type a sentence");
+
+    var sayit = ("Hello, \n <br> created a new line.")
+
+    document.write(sayit);
+    document.write("<br>");
+    document.write("Words: " + sayit.split(" ").length);
+    document.write("<br>");
+    document.write("Characters: " + sayit.length);
+    document.write("<br>");
+
+    document.write("Lines: " + sayit.split(/\r\n|\r|\n/).length);
+
+  </script>
+</html>
